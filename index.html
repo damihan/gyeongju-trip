@@ -32,6 +32,20 @@ nav a{flex:1;text-align:center;padding:12px 4px;border-radius:12px;font-size:18p
 .warn{display:inline-block;margin-top:8px;background:#FCEBD9;color:#7A3A00;border-radius:8px;padding:4px 10px;font-size:17px;font-weight:700}
 .opt{display:inline-block;margin-left:6px;padding:1px 9px;border:2px solid var(--teal);color:var(--teal);border-radius:20px;font-size:15px;font-weight:800;vertical-align:4px}
 .stop.optional{border-style:dashed}
+details.fold{padding:0}
+details.fold>summary{padding:18px;font-size:22px;font-weight:800}
+details.fold>.inner{padding:0 18px 18px}
+details>summary{cursor:pointer;list-style:none;position:relative;padding-right:80px!important}
+details>summary::-webkit-details-marker{display:none}
+details>summary:after{content:"펼치기 ▾";position:absolute;right:14px;top:16px;font-size:15px;font-weight:700;color:var(--teal)}
+details[open]>summary:after{content:"접기 ▴"}
+details.food{margin-top:12px;border:2px solid var(--teal);border-radius:12px;background:#F2F7F6}
+details.food>summary{padding:12px 14px;font-size:19px;font-weight:800;color:var(--teal)}
+.fsub{display:block;font-size:15px;font-weight:700;color:var(--sub)}
+.rest{background:var(--card);margin:0 10px 10px;padding:14px;border-radius:10px;border:1px solid var(--line)}
+.rname{font-size:21px;font-weight:800;line-height:1.4}
+.rank{display:inline-block;margin-right:8px;padding:0 9px;border-radius:20px;font-size:14px;color:#fff;vertical-align:3px}
+.rank.r1{background:var(--red)}.rank.r2{background:var(--gold)}.rank.r3,.rank.r4{background:var(--sub)}
 .map{display:block;margin-top:12px;text-align:center;padding:12px;border-radius:12px;border:2px solid var(--ink);color:var(--ink);font-weight:700;text-decoration:none;font-size:18px}
 .move{margin:12px 0 0 18px;padding:10px 14px;border-left:5px dotted var(--sub);font-size:19px;font-weight:700;color:var(--sub)}
 .move.taxi{border-left:5px solid var(--ink);color:var(--ink);background:var(--move);border-radius:0 12px 12px 0}
@@ -76,56 +90,16 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <a class="map" href="https://map.kakao.com/link/search/힐튼 경주">📍 호텔 지도 보기</a>
   </div>
 
-  <div class="box">
-    <h2>🏨 호텔에서 할 수 있는 것 <span class="opt">전부 선택</span></h2>
+  <details class="box fold">
+    <summary>🏨 호텔에서 할 수 있는 것 <span class="opt">전부 선택</span></summary>
+    <div class="inner">
     <p class="desc" style="margin-bottom:8px">하고 싶을 때만 해요. 일정에 점선 칸으로 표시했어요.</p>
     <div class="row"><b>🍳 조식 뷔페 (1층 레이크사이드)</b><span><span class="big">1인 50,000원</span></span></div>
     <div class="row"><b>♨️ 사우나</b><span><span class="big">1인 16,500원</span> · 아침 6시~밤 10시<br>가서 바로 결제</span></div>
     <div class="row"><b>🏋️ 헬스장</b><span><span class="big">투숙객 무료</span> · 아침 6시~밤 10시<br>운동복 무료로 빌려줘요</span></div>
-    <div class="row"><b>🍽 호텔 레스토랑</b><span>레이크사이드(뷔페) · 다빈치(유럽식) · 실크로드(중식) · 신라 코트 · 르구어메<br>저녁을 호텔에서 먹어도 돼요</span></div>
-  </div>
-
-  <div class="box">
-    <h2>🍚 밥집 후보 <span class="opt">선택</span></h2>
-    <div class="big">신라제면 <span style="font-size:17px;color:var(--sub)">· 황리단길 점심 1순위</span></div>
-    <p class="desc">매콤한 신라칼낙지가 대표 메뉴. 양념에 밥이나 칼국수 비벼 먹으면 맛있대요.</p>
-    <div class="row"><b>메뉴</b><span>신라칼낙지 13,000원 · 신라칼낙새 15,000원 (둘 다 2인분부터)<br>생바지락 칼국수 10,000원 · 감자전 10,000원<br>고기왕만두 8,000원 · 비빔밥 3,000원</span></div>
-    <div class="row"><b>주소</b><span>경북 경주시 첨성로81번길 22-11 (황리단길 안)</span></div>
-    <p class="tel">☎ 010-7208-0056</p>
-    <span class="warn">줄이 아주 길어요 (30분~2시간)</span>
-    <p class="desc" style="margin-top:8px">경주역에서 짐 맡길 때 <b>테이블링 앱으로 원격 줄서기</b> 미리 걸어두기 · 가게가 좁고 주차 안 돼요</p>
-    <a class="map" href="https://map.kakao.com/link/search/경주 신라제면">📍 카카오맵에서 보기</a>
-
-    <div class="big" style="margin-top:22px;padding-top:16px;border-top:2px solid var(--line)">천마 맷돌순두부 <span style="font-size:17px;color:var(--sub)">· 플랜 B</span></div>
-    <p class="desc">신라제면 줄이 너무 길면 여기로. 황리단길 안이라 가까워요.<br>1인 상으로 깔끔하게 나오고 순두부가 부드럽대요.</p>
-    <div class="row"><b>메뉴</b><span>순두부찌개 12,000원 (해물·고기·맑은)<br>치즈·곱창 순두부 13,000원 · 석갈비 13,000원<br>포두부보쌈 28,000원~</span></div>
-    <div class="row"><b>주소</b><span>경북 경주시 첨성로73번길 12</span></div>
-    <p class="tel">☎ 054-705-0022</p>
-    <p class="desc"><b>캐치테이블 줄서기가 아침 10시에 열려요</b> → 기차 안에서 미리 등록해두면 거의 안 기다려요</p>
-    <a class="map" href="https://map.kakao.com/link/search/경주 천마 맷돌순두부">📍 카카오맵에서 보기</a>
-
-    <div class="big" style="margin-top:22px;padding-top:16px;border-top:2px solid var(--line)">소나무 <span style="font-size:17px;color:var(--sub)">· 플랜 C</span></div>
-    <p class="desc">한옥 한식집. 떡갈비·낙지볶음 상차림에 반찬이 정갈하대요. 쉬는 시간 없이 영업.<br>가격·시간은 확인 못 했어요. 카카오맵에서 보고 가세요.</p>
-    <a class="map" href="https://map.kakao.com/link/search/황리단길 소나무">📍 카카오맵에서 보기</a>
-
-    <div class="big" style="margin-top:22px;padding-top:16px;border-top:2px solid var(--line)">소솜당</div>
-    <p class="desc">한옥 마당이 있는 밥집. 김치찜이랑 석갈비가 대표 메뉴예요.<br>호텔에서 택시로 가까워요 (보문호 북쪽).</p>
-    <div class="row"><b>메뉴</b><span>석갈비 20,000원~ · 김치찜 18,000원~<br>불제육 18,000원~ · 뚝배기 함박 15,000원~<br>오징어땡전 14,000원~ · 냉모밀 11,000원~</span></div>
-    <div class="row"><b>영업시간</b><span>오전 11시~밤 9시<br><span class="big">쉬는 시간 오후 3시~5시</span></span></div>
-    <div class="row"><b>주소</b><span>경북 경주시 천북남로 29-5</span></div>
-    <p class="tel">☎ 0507-1480-7181</p>
-    <p class="desc">예약 가능 · 주차 가능 · 점심엔 30분쯤 기다릴 수 있어요</p>
-    <a class="map" href="https://map.kakao.com/link/search/경주 소솜당">📍 카카오맵에서 보기</a>
-
-    <div class="big" style="margin-top:22px;padding-top:16px;border-top:2px solid var(--line)">보문뜰</div>
-    <p class="desc">한우 갈비탕·갈비찜 한식집. 반찬이랑 된장찌개 맛있다는 후기가 많아요.<br>보문단지에서 차로 조금 더 가야 해서 택시로 가요.</p>
-    <div class="row"><b>메뉴</b><span>갈비탕 16,000원 · 한우수제 떡갈비 16,000원<br>매콤 소갈비찜 31,000원 · 돼지갈비찜 22,000원<br>한우불고기 20,000원 · 한우육회비빔밥 15,000원<br>한우물회 15,000원 · 순두부 13,000원</span></div>
-    <div class="row"><b>영업시간</b><span>오전 10시쯤~밤 8시 반 · 연중무휴<br><span class="big">쉬는 시간 오후 3시 반~5시</span></span></div>
-    <div class="row"><b>주소</b><span>경북 경주시 경감로 142-3</span></div>
-    <p class="tel">☎ 054-775-8251</p>
-    <p class="desc">예약 가능 · 주차장 넓음 · 저녁은 7시 전에 가기 (늦으면 마감될 수 있어요)</p>
-    <a class="map" href="https://map.kakao.com/link/search/경주 보문뜰">📍 카카오맵에서 보기</a>
-  </div>
+    <div class="row"><b>🍽 호텔 레스토랑</b><span>레이크사이드(뷔페) · 다빈치(유럽식) · 실크로드(중식) · 신라 코트 · 르구어메</span></div>
+    </div>
+  </details>
 
   <div class="box">
     <h2>🎟 입장료</h2>
@@ -152,7 +126,40 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">12:00</div><div class="name">짐캐리 경주역점에 짐 맡기기</div><p class="desc">짐 맡기면 힐튼 호텔로 보내줘요. 호텔은 안 들르고 가방 없이 바로 황리단길로!</p><a class="map" href="https://map.kakao.com/link/search/짐캐리 경주역점">📍 지도 보기</a></div>
     <div class="move taxi">🚕 택시 20분</div>
 
-    <div class="stop"><div class="time">12:40</div><div class="name"><span class="no">1</span>황리단길</div><p class="desc">점심 먹고 한옥 골목 구경<br>(점심: 신라제면 테이블링 줄서기 → 줄 길면 플랜 B 천마 맷돌순두부)</p><a class="map" href="https://map.kakao.com/link/search/황리단길">📍 지도 보기</a></div>
+    <div class="stop"><div class="time">12:40</div><div class="name"><span class="no">1</span>황리단길</div><p class="desc">점심 먹고 한옥 골목 구경</p><a class="map" href="https://map.kakao.com/link/search/황리단길">📍 지도 보기</a>
+    <details class="food"><summary>🍚 점심 밥집<span class="fsub">신라제면 → 천마 맷돌순두부 → 온천집 → 소나무</span></summary>
+      <div class="rest"><div class="rname"><span class="rank r1">1순위</span>신라제면</div>
+      <p class="desc">매콤한 신라칼낙지가 대표 메뉴. 양념에 밥이나 칼국수 비벼 먹으면 맛있대요.</p>
+      <div class="row"><b>메뉴</b><span>신라칼낙지 13,000원 · 신라칼낙새 15,000원 (둘 다 2인분부터)<br>생바지락 칼국수 10,000원 · 감자전 10,000원<br>고기왕만두 8,000원 · 비빔밥 3,000원</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 첨성로81번길 22-11 (황리단길 안)</span></div>
+      <p class="tel">☎ 010-7208-0056</p>
+      <span class="warn">줄이 아주 길어요 (30분~2시간)</span>
+      <p class="desc" style="margin-top:8px">경주역에서 짐 맡길 때 <b>테이블링 앱으로 원격 줄서기</b> 걸어두기 · 가게가 좁아요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 신라제면">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r2">플랜 B</span>천마 맷돌순두부</div>
+      <p class="desc">황리단길 안이라 가까워요. 1인 상으로 깔끔하게 나오고 순두부가 부드럽대요.</p>
+      <div class="row"><b>메뉴</b><span>순두부찌개 12,000원 (해물·고기·맑은)<br>치즈·곱창 순두부 13,000원 · 석갈비 13,000원<br>포두부보쌈 28,000원~</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 첨성로73번길 12</span></div>
+      <p class="tel">☎ 054-705-0022</p>
+      <p class="desc" style="margin-top:8px"><b>캐치테이블 줄서기가 아침 10시에 열려요</b> → 기차 안에서 미리 등록해두면 거의 안 기다려요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 천마 맷돌순두부">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r3">플랜 C</span>온천집</div>
+      <p class="desc">한옥 골목 안 샤브샤브집. 된장 육수나 얼큰 육수 골라서 먹어요. 쌀쌀한 날 딱 좋아요.</p>
+      <div class="row"><b>메뉴</b><span>한우 샤브샤브 (된장·얼큰, 3단·4단) 27,000~35,000원<br>1인 샤브샤브 19,500~26,000원<br>스키야키 21,000~29,000원 · 미나리 육전 18,000원</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 사정로57번길 13 (황리단길 안)</span></div>
+      <p class="tel">☎ 054-774-8215</p>
+      <span class="warn">줄이 길어요 (40분~1시간)</span>
+      <p class="desc" style="margin-top:8px">가격은 예전 메뉴판 기준이라 달라졌을 수 있어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 온천집">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r4">플랜 D</span>소나무</div>
+      <p class="desc">한옥 한식집. 떡갈비·낙지볶음 상차림에 반찬이 정갈하대요. 쉬는 시간 없이 영업.</p>
+      <p class="desc" style="margin-top:8px">가격·시간은 확인 못 했어요. 카카오맵에서 보고 가세요.</p>
+      <a class="map" href="https://map.kakao.com/link/search/황리단길 소나무">📍 카카오맵에서 보기</a>
+      </div>
+    </details></div>
     <div class="move">🚶 바로 옆</div>
 
     <div class="stop"><div class="time">14:10</div><div class="name"><span class="no">2</span>대릉원</div><p class="desc">큰 왕릉 사이 잔디 산책길 (무덤 안 천마총은 2,000원, 선택)</p><a class="map" href="https://map.kakao.com/link/search/대릉원">📍 지도 보기</a></div>
@@ -176,7 +183,23 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">18:00</div><div class="name"><span class="no">8</span>동궁과 월지</div><p class="desc">연못에 비친 야경. 경주 야경 1등</p><span class="warn">입장료 3,000원</span><a class="map" href="https://map.kakao.com/link/search/동궁과월지">📍 지도 보기</a></div>
     <div class="move taxi">🚕 택시 15분</div>
 
-    <div class="stop"><div class="time">19:20</div><div class="name">호텔 체크인</div><p class="desc">짐캐리로 보낸 짐 찾고 체크인, 보문단지에서 저녁<br>(저녁 후보: 소솜당 밤 9시까지 · 보문뜰 밤 8시 반까지)</p></div>
+    <div class="stop"><div class="time">19:20</div><div class="name">호텔 체크인</div><p class="desc">짐캐리로 보낸 짐 찾고 체크인, 저녁 먹기<br>보문뜰(8시 반 마감)은 이날 빼고 2일차에 가요.</p>
+    <details class="food"><summary>🍚 저녁 밥집<span class="fsub">호텔 레스토랑 → 소솜당</span></summary>
+      <div class="rest"><div class="rname"><span class="rank r1">1순위</span>호텔 레스토랑</div>
+      <p class="desc">호텔 안에서 해결. 피곤한 날 제일 편해요.</p>
+      <div class="row"><b>메뉴</b><span>레이크사이드(뷔페) · 다빈치(유럽식) · 실크로드(중식) · 신라 코트 · 르구어메</span></div>
+      <p class="desc" style="margin-top:8px">가격은 프런트에서 확인</p>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r2">플랜 B</span>소솜당</div>
+      <p class="desc">한옥 마당이 있는 밥집. 김치찜이랑 석갈비가 대표 메뉴. 호텔에서 택시로 가까워요 (보문호 북쪽).</p>
+      <div class="row"><b>메뉴</b><span>석갈비 20,000원~ · 김치찜 18,000원~<br>불제육 18,000원~ · 뚝배기 함박 15,000원~<br>오징어땡전 14,000원~ · 냉모밀 11,000원~</span></div>
+      <div class="row"><b>영업시간</b><span>오전 11시~밤 9시 · <b>쉬는 시간 오후 3시~5시</b></span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 천북남로 29-5</span></div>
+      <p class="tel">☎ 0507-1480-7181</p>
+      <p class="desc" style="margin-top:8px">예약 가능 · 주차 가능 · 점심엔 30분쯤 기다릴 수 있어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 소솜당">📍 카카오맵에서 보기</a>
+      </div>
+    </details></div>
     <div class="move">🚶 호텔 안</div>
 
     <div class="stop optional"><div class="time">21:00</div><div class="name">호텔 사우나 ♨️<span class="opt">선택</span></div><p class="desc">하루 종일 걸은 다리 풀어주기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
@@ -195,9 +218,35 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="move taxi">🚕 택시 15분</div>
 
     <div class="stop"><div class="time">09:45</div><div class="name"><span class="no">1</span>불국사</div><p class="desc">단풍 든 절을 천천히 한 바퀴 (2시간, 무료)</p><a class="map" href="https://map.kakao.com/link/search/불국사">📍 지도 보기</a></div>
-    <div class="move">🚶 바로 앞</div>
+    <div class="move taxi">🚕 불국사 아래 식당가로 (택시 잠깐)</div>
 
-    <div class="stop"><div class="time">12:00</div><div class="name">점심 · 카페</div><p class="desc">불국사 앞 식당 (산채비빔밥·한정식)</p></div>
+    <div class="stop"><div class="time">12:00</div><div class="name">점심 · 카페</div><p class="desc">불국사 아래 마을 식당가에서 점심</p>
+    <details class="food"><summary>🍚 점심 밥집<span class="fsub">경주소반 → 부산식당 불국사본점 → 불국사 밀면</span></summary>
+      <div class="rest"><div class="rname"><span class="rank r1">1순위</span>경주소반</div>
+      <p class="desc">집밥 한 상 같은 한식집. 매장이 깔끔하고 조용하고, 반찬이 많고 정갈하대요.</p>
+      <div class="row"><b>메뉴</b><span>산채비빔밥 12,000원 · 순두부찌개 12,000원<br>차돌된장찌개 12,000원 · 갈비탕 12,000원<br>떡갈비 14,000원 · 버섯불고기전골 18,000원 (2인부터)</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 불국신택지7길 10</span></div>
+      <p class="tel">☎ 054-746-7662</p>
+      <p class="desc" style="margin-top:8px">전화 예약 가능 · 주차 가능</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주소반 불국사">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r2">플랜 B</span>부산식당 불국사본점</div>
+      <p class="desc">차돌박이 된장찌개 정식이 대표, 산채비빔밥도 있어요.</p>
+      <div class="row"><b>영업시간</b><span>오전 8시~저녁 7시 · 수요일 휴무 (9일 월요일은 영업)</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 불국신택지7길 32-7</span></div>
+      <p class="tel">☎ 0507-1342-4640</p>
+      <p class="desc" style="margin-top:8px">가격은 확인 못 했어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/부산식당 경주불국사본점">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r3">플랜 C</span>불국사 밀면</div>
+      <p class="desc">밀면 + 석쇠불고기 세트. 회전이 빨라 줄이 있어도 금방 들어가요.</p>
+      <div class="row"><b>메뉴</b><span>물·비빔·땡초 밀면 + 석쇠불고기 9,000원<br>만두 6,000원</span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 불국장터길 29</span></div>
+      <p class="tel">☎ 054-773-6161</p>
+      <p class="desc" style="margin-top:8px">재료 떨어지면 일찍 닫을 수 있어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 불국사 밀면">📍 카카오맵에서 보기</a>
+      </div>
+    </details></div>
     <div class="move taxi">🚕 택시 15분</div>
 
     <div class="stop"><div class="time">14:00</div><div class="name"><span class="no">2</span>보문정</div><p class="desc">연못과 정자, 사진 예쁘게 나오는 곳</p><a class="map" href="https://map.kakao.com/link/search/보문정">📍 지도 보기</a></div>
@@ -206,7 +255,32 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">14:45</div><div class="name">호텔에서 쉬기</div><p class="desc">방에서 낮잠, 쉬기<br>(선택) 헬스장</p></div>
     <div class="move">🚶 호텔 앞</div>
 
-    <div class="stop"><div class="time">17:00</div><div class="name">보문호 노을 산책</div><p class="desc">호텔 앞 호숫가 걷고 보문단지에서 저녁<br>(저녁 후보: 소솜당 · 보문뜰 · 호텔 레스토랑)</p><a class="map" href="https://map.kakao.com/link/search/보문호">📍 지도 보기</a></div>
+    <div class="stop"><div class="time">17:00</div><div class="name">보문호 노을 산책</div><p class="desc">호텔 앞 호숫가 걷고 택시 타고 저녁 (보문뜰은 7시 전에 도착하기)</p><a class="map" href="https://map.kakao.com/link/search/보문호">📍 지도 보기</a>
+    <details class="food"><summary>🍚 저녁 밥집<span class="fsub">보문뜰 → 소솜당 → 호텔 레스토랑</span></summary>
+      <div class="rest"><div class="rname"><span class="rank r1">1순위</span>보문뜰</div>
+      <p class="desc">한우 갈비탕·갈비찜 한식집. 반찬이랑 된장찌개 맛있다는 후기가 많아요. 보문단지에서 조금 더 가야 해서 택시로 가요.</p>
+      <div class="row"><b>메뉴</b><span>갈비탕 16,000원 · 한우수제 떡갈비 16,000원<br>매콤 소갈비찜 31,000원 · 돼지갈비찜 22,000원<br>한우불고기 20,000원 · 한우육회비빔밥 15,000원<br>한우물회 15,000원 · 순두부 13,000원</span></div>
+      <div class="row"><b>영업시간</b><span>오전 10시쯤~밤 8시 반 · 연중무휴 · <b>쉬는 시간 오후 3시 반~5시</b></span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 경감로 142-3</span></div>
+      <p class="tel">☎ 054-775-8251</p>
+      <p class="desc" style="margin-top:8px">예약 가능 · 주차장 넓음 · 저녁은 7시 전에 가기 (늦으면 마감될 수 있어요)</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 보문뜰">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r2">플랜 B</span>소솜당</div>
+      <p class="desc">한옥 마당이 있는 밥집. 김치찜이랑 석갈비가 대표 메뉴. 호텔에서 택시로 가까워요 (보문호 북쪽).</p>
+      <div class="row"><b>메뉴</b><span>석갈비 20,000원~ · 김치찜 18,000원~<br>불제육 18,000원~ · 뚝배기 함박 15,000원~<br>오징어땡전 14,000원~ · 냉모밀 11,000원~</span></div>
+      <div class="row"><b>영업시간</b><span>오전 11시~밤 9시 · <b>쉬는 시간 오후 3시~5시</b></span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 천북남로 29-5</span></div>
+      <p class="tel">☎ 0507-1480-7181</p>
+      <p class="desc" style="margin-top:8px">예약 가능 · 주차 가능 · 점심엔 30분쯤 기다릴 수 있어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 소솜당">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r3">플랜 C</span>호텔 레스토랑</div>
+      <p class="desc">호텔 안에서 해결. 피곤한 날 제일 편해요.</p>
+      <div class="row"><b>메뉴</b><span>레이크사이드(뷔페) · 다빈치(유럽식) · 실크로드(중식) · 신라 코트 · 르구어메</span></div>
+      <p class="desc" style="margin-top:8px">가격은 프런트에서 확인</p>
+      </div>
+    </details></div>
     <div class="move">🚶 호텔로</div>
 
     <div class="stop optional"><div class="time">20:00</div><div class="name">호텔 사우나 ♨️<span class="opt">선택</span></div><p class="desc">따뜻하게 몸 풀고 푹 자기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
@@ -223,7 +297,32 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">10:30</div><div class="name">호수 아침 산책</div><p class="desc">마지막으로 짧게 한 바퀴</p></div>
     <div class="move">🚶 호텔 앞</div>
 
-    <div class="stop"><div class="time">11:00</div><div class="name">체크아웃 · 점심</div><p class="desc">짐은 호텔에 맡기고 보문단지에서 점심, 카페</p></div>
+    <div class="stop"><div class="time">11:00</div><div class="name">체크아웃 · 점심</div><p class="desc">짐은 호텔에 맡기고 점심 먹고 오기. 1시 40분 택시 타기 전에 호텔로 돌아와요.</p>
+    <details class="food"><summary>🍚 점심 밥집<span class="fsub">소솜당 → 보문뜰 → 호텔 레스토랑</span></summary>
+      <div class="rest"><div class="rname"><span class="rank r1">1순위</span>소솜당</div>
+      <p class="desc">한옥 마당이 있는 밥집. 김치찜이랑 석갈비가 대표 메뉴. 호텔에서 택시로 가까워요 (보문호 북쪽).</p>
+      <div class="row"><b>메뉴</b><span>석갈비 20,000원~ · 김치찜 18,000원~<br>불제육 18,000원~ · 뚝배기 함박 15,000원~<br>오징어땡전 14,000원~ · 냉모밀 11,000원~</span></div>
+      <div class="row"><b>영업시간</b><span>오전 11시~밤 9시 · <b>쉬는 시간 오후 3시~5시</b></span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 천북남로 29-5</span></div>
+      <p class="tel">☎ 0507-1480-7181</p>
+      <p class="desc" style="margin-top:8px">예약 가능 · 주차 가능 · 점심엔 30분쯤 기다릴 수 있어요</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 소솜당">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r2">플랜 B</span>보문뜰</div>
+      <p class="desc">한우 갈비탕·갈비찜 한식집. 반찬이랑 된장찌개 맛있다는 후기가 많아요. 보문단지에서 조금 더 가야 해서 택시로 가요.</p>
+      <div class="row"><b>메뉴</b><span>갈비탕 16,000원 · 한우수제 떡갈비 16,000원<br>매콤 소갈비찜 31,000원 · 돼지갈비찜 22,000원<br>한우불고기 20,000원 · 한우육회비빔밥 15,000원<br>한우물회 15,000원 · 순두부 13,000원</span></div>
+      <div class="row"><b>영업시간</b><span>오전 10시쯤~밤 8시 반 · 연중무휴 · <b>쉬는 시간 오후 3시 반~5시</b></span></div>
+      <div class="row"><b>주소</b><span>경북 경주시 경감로 142-3</span></div>
+      <p class="tel">☎ 054-775-8251</p>
+      <p class="desc" style="margin-top:8px">예약 가능 · 주차장 넓음 · 저녁은 7시 전에 가기 (늦으면 마감될 수 있어요)</p>
+      <a class="map" href="https://map.kakao.com/link/search/경주 보문뜰">📍 카카오맵에서 보기</a>
+      </div>
+      <div class="rest"><div class="rname"><span class="rank r3">플랜 C</span>호텔 레스토랑</div>
+      <p class="desc">호텔 안에서 해결. 피곤한 날 제일 편해요.</p>
+      <div class="row"><b>메뉴</b><span>레이크사이드(뷔페) · 다빈치(유럽식) · 실크로드(중식) · 신라 코트 · 르구어메</span></div>
+      <p class="desc" style="margin-top:8px">가격은 프런트에서 확인</p>
+      </div>
+    </details></div>
     <div class="move taxi">🚕 1시 40분에 택시 (30분)</div>
 
     <div class="stop"><div class="time">14:35</div><div class="name">경주역 · 기차</div><p class="desc">엄마 제천 4시 1분 도착<br>다미 서울 5시 41분 도착</p><span class="warn">2시 10분까지 역 도착</span></div>
