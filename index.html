@@ -30,6 +30,8 @@ nav a{flex:1;text-align:center;padding:12px 4px;border-radius:12px;font-size:18p
 .name{font-size:24px;font-weight:800;margin:2px 0 4px;line-height:1.35}
 .desc{color:var(--sub);margin:0}
 .warn{display:inline-block;margin-top:8px;background:#FCEBD9;color:#7A3A00;border-radius:8px;padding:4px 10px;font-size:17px;font-weight:700}
+.opt{display:inline-block;margin-left:6px;padding:1px 9px;border:2px solid var(--teal);color:var(--teal);border-radius:20px;font-size:15px;font-weight:800;vertical-align:4px}
+.stop.optional{border-style:dashed}
 .map{display:block;margin-top:12px;text-align:center;padding:12px;border-radius:12px;border:2px solid var(--ink);color:var(--ink);font-weight:700;text-decoration:none;font-size:18px}
 .move{margin:12px 0 0 18px;padding:10px 14px;border-left:5px dotted var(--sub);font-size:19px;font-weight:700;color:var(--sub)}
 .move.taxi{border-left:5px solid var(--ink);color:var(--ink);background:var(--move);border-radius:0 12px 12px 0}
@@ -71,9 +73,16 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <p class="desc">경북 경주시 보문로 484-7</p>
     <p class="tel">☎ 054-745-7788</p>
     <p class="desc">택시 기사님께 “보문단지 힐튼 호텔이요” 하면 돼요.</p>
-    <div class="row"><b>조식</b><span><span class="big">1인 50,000원</span> · 투숙객 할인 있음</span></div>
-    <div class="row"><b>사우나</b><span><span class="big">1인 16,500원</span> · 아침 6시~밤 10시<br>투숙객 할인은 프런트에 물어보기</span></div>
     <a class="map" href="https://map.kakao.com/link/search/힐튼 경주">📍 호텔 지도 보기</a>
+  </div>
+
+  <div class="box">
+    <h2>🏨 호텔에서 할 수 있는 것 <span class="opt">전부 선택</span></h2>
+    <p class="desc" style="margin-bottom:8px">하고 싶을 때만 해요. 일정에 점선 칸으로 표시했어요.</p>
+    <div class="row"><b>🍳 조식 뷔페</b><span><span class="big">1인 50,000원</span> · 투숙객 할인 있음</span></div>
+    <div class="row"><b>♨️ 사우나</b><span><span class="big">1인 16,500원</span> · 아침 6시~밤 10시<br>투숙객 할인은 프런트에 물어보기</span></div>
+    <div class="row"><b>🏋️ 헬스장</b><span><span class="big">투숙객 무료</span> · 아침 6시~밤 10시<br>운동복 무료로 빌려줘요</span></div>
+    <div class="row"><b>🏊 실내 수영장</b><span><span class="big">유료</span> · 가격은 프런트에 물어보기<br>(야외 수영장은 여름에만 열어요)</span></div>
   </div>
 
   <div class="box">
@@ -128,7 +137,7 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">19:20</div><div class="name">호텔 체크인</div><p class="desc">짐캐리로 보낸 짐 찾고 체크인, 보문단지에서 저녁</p></div>
     <div class="move">🚶 호텔 안</div>
 
-    <div class="stop"><div class="time">21:00</div><div class="name">호텔 사우나 ♨️</div><p class="desc">하루 종일 걸은 다리 풀어주기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
+    <div class="stop optional"><div class="time">21:00</div><div class="name">호텔 사우나 ♨️<span class="opt">선택</span></div><p class="desc">하루 종일 걸은 다리 풀어주기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
   </section>
 
   <!-- 2일차 -->
@@ -137,7 +146,7 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <p class="sum">불국사 단풍 보고, 보문정에서 걸어서 5분이면 호텔이에요.</p>
     <div class="mapbox"><div id="map2" class="lmap"></div><p class="mapcap">택시로 불국사 → 보문정, 보문정에서 걸어서 호텔</p></div>
 
-    <div class="stop"><div class="time">08:00</div><div class="name">호텔 조식 🍳</div><p class="desc">호텔 뷔페에서 아침 천천히</p><span class="warn">1인 50,000원 · 투숙객 할인</span></div>
+    <div class="stop optional"><div class="time">08:00</div><div class="name">호텔 조식 🍳<span class="opt">선택</span></div><p class="desc">호텔 뷔페에서 아침 천천히</p><span class="warn">1인 50,000원 · 투숙객 할인</span></div>
     <div class="move">🚶 호텔 안</div>
 
     <div class="stop"><div class="time">09:30</div><div class="name">호텔 출발</div><p class="desc">든든하게 먹고 출발</p></div>
@@ -152,13 +161,13 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">14:00</div><div class="name"><span class="no">2</span>보문정</div><p class="desc">연못과 정자, 사진 예쁘게 나오는 곳</p><a class="map" href="https://map.kakao.com/link/search/보문정">📍 지도 보기</a></div>
     <div class="move">🚶 걸어서 5분</div>
 
-    <div class="stop"><div class="time">14:45</div><div class="name">호텔에서 쉬기</div><p class="desc">방에서 낮잠, 쉬기</p></div>
+    <div class="stop"><div class="time">14:45</div><div class="name">호텔에서 쉬기</div><p class="desc">방에서 낮잠, 쉬기<br>(선택) 헬스장이나 실내 수영장</p></div>
     <div class="move">🚶 호텔 앞</div>
 
     <div class="stop"><div class="time">17:00</div><div class="name">보문호 노을 산책</div><p class="desc">호텔 앞 호숫가 걷고 보문단지에서 저녁</p><a class="map" href="https://map.kakao.com/link/search/보문호">📍 지도 보기</a></div>
     <div class="move">🚶 호텔로</div>
 
-    <div class="stop"><div class="time">20:00</div><div class="name">호텔 사우나 ♨️</div><p class="desc">따뜻하게 몸 풀고 푹 자기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
+    <div class="stop optional"><div class="time">20:00</div><div class="name">호텔 사우나 ♨️<span class="opt">선택</span></div><p class="desc">따뜻하게 몸 풀고 푹 자기 (밤 10시까지)</p><span class="warn">1인 16,500원</span></div>
   </section>
 
   <!-- 3일차 -->
@@ -166,7 +175,7 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <h2>3일차 · 10일 (화)</h2>
     <p class="sum">늦잠 자고 느긋하게, 기차 타러 가요.</p>
 
-    <div class="stop"><div class="time">08:30</div><div class="name">늦잠 · 호텔 조식 🍳</div><p class="desc">호텔 뷔페에서 아침 먹고 호텔 카페에서 쉬기</p><span class="warn">1인 50,000원 · 투숙객 할인</span></div>
+    <div class="stop optional"><div class="time">08:30</div><div class="name">늦잠 · 호텔 조식 🍳<span class="opt">선택</span></div><p class="desc">호텔 뷔페에서 아침 먹고 호텔 카페에서 쉬기</p><span class="warn">1인 50,000원 · 투숙객 할인</span></div>
     <div class="move">🚶 호텔 앞</div>
 
     <div class="stop"><div class="time">10:30</div><div class="name">호수 아침 산책</div><p class="desc">마지막으로 짧게 한 바퀴</p></div>
