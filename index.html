@@ -90,16 +90,16 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
   <!-- 1일차 -->
   <section class="day d1" id="day1">
     <h2>1일차 · 8일 (일)</h2>
-    <p class="sum">호텔에 짐 맡기고, 황리단길부터 야경까지 쭉 걸어요.</p>
-    <div class="mapbox"><div id="map1" class="lmap"></div><p class="mapcap">경주역 → 호텔(짐) → 황리단길은 택시 · 그다음 번호 순서대로 걸어가요 (총 약 3km)</p></div>
+    <p class="sum">짐은 경주역에서 호텔로 보내고, 가볍게 황리단길부터 야경까지 쭉 걸어요.</p>
+    <div class="mapbox"><div id="map1" class="lmap"></div><p class="mapcap">경주역 → 황리단길은 택시 · 그다음 번호 순서대로 걸어가요 (총 약 3km)</p></div>
 
-    <div class="stop"><div class="time">11:55</div><div class="name">경주역 도착</div><p class="desc">1번 출구로 나가서 택시 타기</p></div>
-    <div class="move taxi">🚕 택시 30분</div>
+    <div class="stop"><div class="time">11:55</div><div class="name">경주역 도착</div><p class="desc">내리면 바로 짐캐리 찾아가기</p></div>
+    <div class="move">🚶 역 안</div>
 
-    <div class="stop"><div class="time">12:30</div><div class="name">힐튼 호텔에 짐 맡기기</div><p class="desc">프런트에 짐만 맡기고 바로 나와요</p></div>
+    <div class="stop"><div class="time">12:05</div><div class="name">짐캐리에 짐 맡기기</div><p class="desc">경주역 짐캐리에 짐 맡기면 힐튼 호텔로 보내줘요. 우리는 가방 없이 바로 출발!</p></div>
     <div class="move taxi">🚕 택시 20분</div>
 
-    <div class="stop"><div class="time">13:00</div><div class="name"><span class="no">1</span>황리단길</div><p class="desc">점심 먹고 한옥 골목 구경</p><a class="map" href="https://map.kakao.com/link/search/황리단길">📍 지도 보기</a></div>
+    <div class="stop"><div class="time">12:40</div><div class="name"><span class="no">1</span>황리단길</div><p class="desc">점심 먹고 한옥 골목 구경</p><a class="map" href="https://map.kakao.com/link/search/황리단길">📍 지도 보기</a></div>
     <div class="move">🚶 바로 옆</div>
 
     <div class="stop"><div class="time">14:10</div><div class="name"><span class="no">2</span>대릉원</div><p class="desc">큰 왕릉 사이 잔디 산책길 (무덤 안 천마총은 2,000원, 선택)</p><a class="map" href="https://map.kakao.com/link/search/대릉원">📍 지도 보기</a></div>
@@ -123,7 +123,7 @@ footer{margin-top:36px;color:var(--sub);font-size:16px}
     <div class="stop"><div class="time">18:00</div><div class="name"><span class="no">8</span>동궁과 월지</div><p class="desc">연못에 비친 야경. 경주 야경 1등</p><span class="warn">입장료 3,000원</span><a class="map" href="https://map.kakao.com/link/search/동궁과월지">📍 지도 보기</a></div>
     <div class="move taxi">🚕 택시 15분</div>
 
-    <div class="stop"><div class="time">19:20</div><div class="name">호텔 체크인</div><p class="desc">체크인하고 보문단지에서 저녁</p></div>
+    <div class="stop"><div class="time">19:20</div><div class="name">호텔 체크인</div><p class="desc">짐캐리로 보낸 짐 찾고 체크인, 보문단지에서 저녁</p></div>
   </section>
 
   <!-- 2일차 -->
@@ -183,7 +183,7 @@ function walk(m,pts,col){return L.polyline(pts,{color:col,weight:6,dashArray:'2 
 function taxi(m,pts,col,label){var l=L.polyline(pts,{color:col,weight:5,opacity:.85}).addTo(m);if(label)l.bindTooltip(label,{permanent:true,direction:'center',className:'mv'});return l;}
 // 전체
 var m0=map('map0');
-taxi(m0,[P.sta,P.htl],RED);taxi(m0,[P.htl,P.hrd],RED);taxi(m0,[P.dgw,P.htl],RED);walk(m0,[P.hrd,P.cmd,P.wjg,P.dgw],RED);
+taxi(m0,[P.sta,P.hrd],RED);taxi(m0,[P.dgw,P.htl],RED);walk(m0,[P.hrd,P.cmd,P.wjg,P.dgw],RED);
 taxi(m0,[P.htl,P.bgs],GOLD);taxi(m0,[P.bgs,P.bmj],GOLD);walk(m0,[P.bmj,P.htl],GOLD);
 taxi(m0,[[35.8395,129.2850],[35.7990,129.1405]],TEAL);
 pin(m0,P.sta,'역',INK,'경주역','bottom',true);pin(m0,P.htl,'H',INK,'호텔','top',true);
